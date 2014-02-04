@@ -5,7 +5,6 @@
 	<meta name="description" content="Proyecto de la primera generación del 2014 del curso de diseño web online" />
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
 	<title>Puls2014: Comuinidad de Personas Cool</title>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="estilos.css">
 	<script src="prefixfree.js"></script>
@@ -18,9 +17,7 @@
 		<h1>
 			Puls2014: Comunidad de Personas Cool
 		</h1>
-		<figure id="avatar">
-			<img src="avatar.jpg" />
-		</figure>
+		<figure id="avatar"></figure>
 	</header>	
 	<nav>
 		<ul>
@@ -29,15 +26,17 @@
 			<li><a href="#">JavaScript</a></li>
 			<li><a href="#">CSS3</a></li>
 			<li><a href="#">Django</a></li>
-			<li id="publicar_nav"><a id="mostrar-form" href="#" class="icon-lapiz">Publicar</a></li>
+			<li id="publicar_nav"><a href="#" id="mostrar-form" data-nombre="francisco" class="icon-lapiz">Publicar</a></li>
 		</ul>		
 	</nav>
 	<form action="" id="formulario" class="formulario">
-		<input type="text" id="titulo" placeholder="Título" required />
-		<input type="url" id="url" placeholder="Link" required />
-		<input type="submit" value="Agregar" />
-	</form>
+ 		<input type="text" placeholder="Título" id="titulo" name="titulo" required>
+ 		<input type="url" placeholder="Link" id="link" name="link" required>
+ 		<input type="submit" value="Agregar">
+ 	</form>
 	<aside>
+		<div id="clima"></div>
+		<div id="geo"></div>
 		<video width="320" height="240" autoplay>
 			<source src="lecturas.mp4" type="video/mp4">
 			<source src="lecturas.ogg" type="video/ogg">
@@ -68,7 +67,7 @@
 				720
 				<a href="#" class="down icon-flecha-abajo"></a>
 				<a href="#" class="comentarios_item">69</a>
-				<a href="#" class="guardar_item icon-flecha-abajo icon-estrella"></a>
+				<a href="#" class="guardar_item icon-estrella"></a>
 			</div>
 		</article>
 		<article class="item">
@@ -94,7 +93,7 @@
 				720
 				<a href="#" class="down icon-flecha-abajo"></a>
 				<a href="#" class="comentarios_item">69</a>
-				<a href="#" class="guardar_item icon-flecha-abajo icon-estrella"></a>
+				<a href="#" class="guardar_item icon-estrella"></a>
 			</div>
 		</article>
 		<article class="item">
@@ -120,7 +119,7 @@
 				720
 				<a href="#" class="down icon-flecha-abajo"></a>
 				<a href="#" class="comentarios_item">69</a>
-				<a href="#" class="guardar_item icon-flecha-abajo icon-estrella"></a>
+				<a href="#" class="guardar_item icon-estrella"></a>
 			</div>
 		</article>
 		<article class="item">
@@ -146,7 +145,7 @@
 				720
 				<a href="#" class="down icon-flecha-abajo"></a>
 				<a href="#" class="comentarios_item">69</a>
-				<a href="#" class="guardar_item icon-flecha-abajo icon-estrella"></a>
+				<a href="#" class="guardar_item icon-estrella"></a>
 			</div>
 		</article>
 		<article class="item">
@@ -172,7 +171,7 @@
 				720
 				<a href="#" class="down icon-flecha-abajo"></a>
 				<a href="#" class="comentarios_item">69</a>
-				<a href="#" class="guardar_item icon-flecha-abajo icon-estrella"></a>
+				<a href="#" class="guardar_item icon-estrella"></a>
 			</div>
 		</article>
 		<article class="item">
@@ -198,7 +197,7 @@
 				720
 				<a href="#" class="down icon-flecha-abajo"></a>
 				<a href="#" class="comentarios_item">69</a>
-				<a href="#" class="guardar_item icon-flecha-abajo icon-estrella"></a>
+				<a href="#" class="guardar_item icon-estrella"></a>
 			</div>
 		</article>
 	</section>
@@ -209,8 +208,11 @@
 		<p>
 			mejorando.la 2014
 		</p>
+		<div class="logos"></div>
 	</footer>	
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="formulario.js"></script>
+	<script src="geo.js"></script>
+	<script src="ajax.js"></script>	
 </body>
 </html>

@@ -10,6 +10,8 @@
 
 }*/
 
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 @font-face {
 	font-family: 'icomoon';
 	src:url('fuentes/icomoon.eot');
@@ -47,7 +49,7 @@
 	content: "\e602";
 	margin-right: .5em;
 	position: relative;
-	/*top: .1em;*/
+	top: .1em;
 }
 
 .icon-lapiz:before {
@@ -69,6 +71,8 @@ body
 {
 	background: #EEEEEE;
 	/*font-family: 'open_sansregular', Arial;*/
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: Arial;*/
 	font-size: 16px;
 }
 
@@ -177,7 +181,7 @@ nav ul
 nav ul li
 {
 	display: inline-block;
-	margin: 0 1em 0 0;
+	margin: 0 .5em 0 0;
 }
 
 nav ul li a
@@ -186,7 +190,7 @@ nav ul li a
 	display: block;
 	padding: 0.5em;
 	text-decoration: none;
-	transition: .3s;
+	-webkit-transition: .3s;
 }
 
 nav ul li a:hover
@@ -214,6 +218,13 @@ nav ul #publicar_nav a
 nav ul #publicar_nav a:hover
 {
 	box-shadow: 0 0 30px yellow;
+}
+
+nav ul #publicar_nav a.disabled
+{
+	background-color: grey;
+	cursor: default;
+	box-shadow: none;	
 }
 
 
@@ -283,11 +294,6 @@ nav ul #publicar_nav a:hover
 	text-decoration: none;
 }
 
-#contenido .item .votacion a
-{
-	text-decoration: none;
-}
-
 #contenido .item .votacion
 {
 	background: white;
@@ -299,6 +305,12 @@ nav ul #publicar_nav a:hover
 	right: 3%;
 	top:100%;
 }
+
+#contenido .item .votacion a
+{
+	text-decoration: none;
+}
+
 
 #contenido .item .votacion .guardar_item
 {
@@ -321,10 +333,39 @@ nav ul #publicar_nav a:hover
 	float: right;
 }
 
+/** FORMULARIO **/
+
+.formulario
+{
+	display: none;
+	padding: 1em;
+	text-align: right;
+}
+
+.formulario input
+{
+	border-radius: 5px;
+	padding: 0.2em 0.6em;
+}
+
+.formulario input[type="text"], .formulario input[type="url"]
+{
+	border: 1px solid #888;
+}
+
+.formulario input[type="submit"]
+{
+	background: #22BCE0;
+	border: 1px solid #22BCE0;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	font-style: italic;
+	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
+	color: white;
+}
+
+
+
 @media screen and (min-width: 800px){
-	/*body{
-		background: red;
-	}*/
 	#contenido
 	{
 		overflow: hidden;
@@ -355,28 +396,3 @@ nav ul #publicar_nav a:hover
 	}
 }
 
-/** FORMULARIO **/
-
-.formulario
-{
-	display: none;
-	padding: 1em;
-	text-align: right;
-}
-
-.formulario input
-{
-	border: 1px solid #CCC;
-	border-radius: 5px;
-	padding: 0.2em 0.6em;
-}
-
-.formulario input[type="submit"]
-{
-	background: #22BCE0;
-	border-color: #22BCE0;
-	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
-	font-style: italic;
-	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
-	color: white;
-}
