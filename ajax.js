@@ -53,7 +53,7 @@ function obtenerClima(woeid){
 
 function procesarClima(datos)
 {
-	var clima = datos.jquery.results.channel;
+	var clima = datos.query.results.channel;
 	var temp  = clima.item.condition.temp;
 	var unit  = clima.units.temperature;
 	var code  = clima.item.condition.code;

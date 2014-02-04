@@ -392,6 +392,7 @@ nav ul #publicar_nav a.disabled
 
 	aside video
 	{
+		margin-left: -.5em;
 		width: 100%;
 	}
 }
