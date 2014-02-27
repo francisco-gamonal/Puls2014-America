@@ -48,4 +48,4 @@ function agregarPost(){
 $('#publicar_nav a').click( mostrarOcultarFormulario );
 $('#formulario').on('submit', agregarPost)
 
-//probando cambios..
+//hola
